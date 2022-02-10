@@ -1,0 +1,191 @@
+/*sass --watch sass/style.scss:css/style.css*/
+$colorMenu: #d6001c;
+html{
+    font-weight: 16px;
+}
+a{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.04rem;
+}
+h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.menu{
+    background: $colorMenu;
+    color: #fff;
+    position: fixed;
+    z-index: 101;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    img[alt="logo"]{
+        position: absolute;
+        top: 10px;
+        left: 60px;
+    }
+    &.darkRed{
+        background-color: $colorMenu;
+    }
+    &.blue{
+        background-color: #00b2aa;
+    }
+    &.black{
+        background-color: #000;
+    }
+    &.red{
+        background-color: #e31d1a;
+    }
+
+    a{
+        position: relative;
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: darken($colorMenu,20%);
+            height: 3px;
+            width: 0;
+            transition: .15s ease-in-out;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+    a+a{
+        margin-left: 35px;
+    }
+}
+.main-header{
+    background: rgb(235, 79, 52);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+
+    height: 500px;
+    .all-wallpapers{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        #base-wp{
+            opacity: 1;
+            .base-img{
+                width: 34%;
+            }
+        }
+        .wallpaper{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            opacity: 0;
+
+            &:nth-of-type(1){
+                z-index: 1;
+                background: #e40421;
+            }
+            &:nth-of-type(2){
+                z-index: 1;
+                background: #00bcb4;
+            }
+            &:nth-of-type(3){
+                z-index: 1;
+                background: #f9e32c;
+                color: #000;
+            }
+            &:nth-of-type(4){
+                z-index: 1;
+                background: #004e95;
+            }
+            &:nth-of-type(5){
+                z-index: 1;
+                background: #ff9e19;
+                color: #000;
+            }
+            &:nth-of-type(6){
+                z-index: 1;
+                background: #f0f0f0;
+                color: #000;
+            }
+            &:nth-of-type(7){
+                z-index: 1;
+                background: #4cbbe3;
+            }
+            &:nth-of-type(8){
+                z-index: 1;
+                background: #ffd300;
+                color: #000;
+            }
+            &:nth-of-type(9){
+                z-index: 0;
+                background: #e40421;
+            }
+            img{
+                width: 140px;
+            }
+        }
+    }
+    .all-beers{
+        position: absolute;
+        z-index: 100;
+        bottom: -114px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 90%;
+        max-width: 1280px;
+
+        text-align: center;
+        .beer{
+            width: 12.5%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #000;
+                height: 3px;
+                width: 0;
+                transition: .15s ease-in-out;
+            }
+            &:hover:after{
+                width: 90%;
+            }
+            a:first-child{
+                margin-bottom: 14px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

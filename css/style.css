@@ -1,0 +1,153 @@
+/*sass --watch sass/style.scss:css/style.css*/
+html {
+  font-weight: 16px; }
+
+a {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.04rem; }
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase; }
+
+.menu {
+  background: #d6001c;
+  color: #fff;
+  position: fixed;
+  z-index: 101;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  transition: .3s ease-in-out; }
+  .menu img[alt="logo"] {
+    position: absolute;
+    top: 10px;
+    left: 60px; }
+  .menu.darkRed {
+    background-color: #d6001c; }
+  .menu.blue {
+    background-color: #00b2aa; }
+  .menu.black {
+    background-color: #000; }
+  .menu.red {
+    background-color: #e31d1a; }
+  .menu a {
+    position: relative; }
+    .menu a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #70000f;
+      height: 3px;
+      width: 0;
+      transition: .15s ease-in-out; }
+    .menu a:hover:after {
+      width: 100%; }
+  .menu a + a {
+    margin-left: 35px; }
+
+.main-header {
+  background: #eb4f34;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  height: 500px; }
+  .main-header .all-wallpapers {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff; }
+    .main-header .all-wallpapers #base-wp {
+      opacity: 1; }
+      .main-header .all-wallpapers #base-wp .base-img {
+        width: 34%; }
+    .main-header .all-wallpapers .wallpaper {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(1) {
+        z-index: 1;
+        background: #e40421; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(2) {
+        z-index: 1;
+        background: #00bcb4; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(3) {
+        z-index: 1;
+        background: #f9e32c;
+        color: #000; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(4) {
+        z-index: 1;
+        background: #004e95; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(5) {
+        z-index: 1;
+        background: #ff9e19;
+        color: #000; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(6) {
+        z-index: 1;
+        background: #f0f0f0;
+        color: #000; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(7) {
+        z-index: 1;
+        background: #4cbbe3; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(8) {
+        z-index: 1;
+        background: #ffd300;
+        color: #000; }
+      .main-header .all-wallpapers .wallpaper:nth-of-type(9) {
+        z-index: 0;
+        background: #e40421; }
+      .main-header .all-wallpapers .wallpaper img {
+        width: 140px; }
+  .main-header .all-beers {
+    position: absolute;
+    z-index: 100;
+    bottom: -114px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+    max-width: 1280px;
+    text-align: center; }
+    .main-header .all-beers .beer {
+      width: 12.5%;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative; }
+      .main-header .all-beers .beer:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #000;
+        height: 3px;
+        width: 0;
+        transition: .15s ease-in-out; }
+      .main-header .all-beers .beer:hover:after {
+        width: 90%; }
+      .main-header .all-beers .beer a:first-child {
+        margin-bottom: 14px; }
+        .main-header .all-beers .beer a:first-child img {
+          width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
